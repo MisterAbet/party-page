@@ -24,11 +24,11 @@ npm run build
 
 **UI Walkthrough**
 
-1. On main page you will see form fields for editing Party event. You can edit party name, date and location.
-2. To add your contacts to Party and sync it with google calendar you need to sign in to your google account. Click to Sign In link in top-right corner of the page to open Sign In dialog.
-3. After success autorization you will see "Select contacts" and "Add to Calendar" buttons.
-4. Click on "Select contacts" button to open select contacts dialog. Select contacts who you want to invite to party and click "Invite" button.
-5. Selected contacts will be show under "Select contacts" button.
-6. To add Party to your Google Calendar you can click "Add to Calendar" button. Also you can select one of your calendars, to add event.
-7. After success save event to Google Calendar you will see a success message at top-right corner of page. Also "Add to Calendar" button will change to "Synch Calendar" button.
-8. You can make changes in Party and press "Synch Calendar" button to update event in Google Calendar. After sucess sync you will see a success message at top-right corner of page.
+1. **About**
+There are form fields on a main page for editing Party event: party name, location and date.
+2. **Authorization**
+You must sign-in to be able to pick your contacts/sync an event with a google calendar. Use Sign In link in top-right corner. You will see "Select contacts" and "Add to Calendar" buttons after successful authorization.
+3. **How to add contacts**
+Click "Select contacts" button to open Contacts dialog. Select contacts you want to invite to the party and click "Invite" button. Selected contacts will be shown under "Select contacts" button.
+4. **Sync with Google Calendar**
+Click "Add to Calendar" button to create an event in your Google Calendar. You will see a “success message” at top-right corner of the page.  "Add to Calendar" button will be changed to "Synch Calendar" button. Clicking this button will update the event in the Google Calendar.
