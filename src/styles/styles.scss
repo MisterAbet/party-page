@@ -1,0 +1,90 @@
+@import './colors.scss';
+
+@media screen and (min-width: 1200px){
+  #app{
+    margin-top: 60px;
+  }
+}
+
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // text-align: center;
+  color: $text-color;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px;
+  font-size: 16px;
+}
+
+input, select{
+  padding: 8px 6px;
+}
+
+button{
+  padding: 8px 10px;
+  background-color: $button-color;
+  color: $button-text-color;
+  border: none;
+  border-radius: 3px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+a{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+h1, h2 {
+font-weight: normal;
+}
+
+.row{
+  display: flex;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: relative;
+  width: 100%;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.text-left{
+  text-align: left;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.full-width{
+  width: 100%;
+}
+
+.flex-to-right{
+  margin-left: auto;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert {
+  position: relative;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}

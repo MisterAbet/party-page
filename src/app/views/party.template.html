@@ -1,0 +1,46 @@
+<div>
+  <div class="row">
+    {{partyName}}
+  </div>
+  <div class="row">
+    <input ref="input" type="text" v-model="partyName" class="full-width">
+  </div>
+  <div class="row" v-if="isAuthenticated">
+    <button @click="selectContacts">Select contacts</button>
+    <contacts-select :contacts="contacts" :selected="selectedContactsIds" @ok="onSelectContacts" ref="con">
+    </contacts-select>
+  </div>
+  <div v-if="isAuthenticated">
+    <span class="contact-name" v-for="(contact, index) in selectedContacts" :key="index" >{{contact.displayName || contact.email}}</span>
+  </div>
+  <div class="row">
+    <gmap-autocomplete
+      :value="place.title"
+      @place_changed="setPlace"
+      placeholder="enter address"
+      class="full-width"
+    >
+    </gmap-autocomplete>
+  </div>
+  <div class="row">
+    <Gmap-Map style="width: 100%; height: 500px;" :zoom="mapZoom" :center="this.place.position">
+      <Gmap-Marker
+        v-if="this.place"
+        :position="this.place.position"
+        ></Gmap-Marker>
+    </Gmap-Map>
+  </div>
+  <div class="row">
+    <datepicker v-model="date" :disabled="{to: yesterday}" ></datepicker>
+  </div>
+  <div class="row" v-if="isAuthenticated && !existEvent">
+    <button @click="saveToCalendar">Add to Calendar</button>
+    <select name="calendars" id="calendars" v-model="calendar" >
+      <option v-for="(calendar, index) in calendars" :key="index" :value="calendar.id" >{{calendar.name}}</option>
+    </select>
+
+  </div>
+  <div v-if="isAuthenticated && existEvent" class="row">
+    <button @click="updateToCalendar">Synch Calendar</button>
+  </div>
+</div>
