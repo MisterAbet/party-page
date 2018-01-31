@@ -166,7 +166,7 @@ export default new Vuex.Store({
             vueAuth.getToken(),
             context.state.selectedCalendar,
             context.state.partyName,
-            context.state.place.name,
+            context.state.place.title,
             context.getters.partyDate,
             context.state.selectedContacts
           )
@@ -195,7 +195,7 @@ export default new Vuex.Store({
               context.state.selectedCalendar,
               context.state.partyId,
               context.state.partyName,
-              context.state.place.name,
+              context.state.place.title,
               context.getters.partyDate,
               context.state.selectedContacts
             )
